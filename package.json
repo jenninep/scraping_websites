@@ -1,0 +1,28 @@
+{
+  "name": "scraping_websites",
+  "version": "1.0.0",
+  "description": "A web app that lets users leave comments on the latest news which is scraped from a website using cheerio. Packages used are express, express-handlebars, mongoose, body-parser, cheerio and request.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenninep/scraping_websites.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenninep/scraping_websites/issues"
+  },
+  "homepage": "https://github.com/jenninep/scraping_websites#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
+    "handlebars": "^4.0.5",
+    "mongojs": "^2.4.0",
+    "mongoose": "^4.6.0",
+    "request": "^2.74.0"
+  }
+}
