@@ -51,21 +51,21 @@ app.get('/scrape', function(req, res){
 		var link = $(element).find('a').first().attr('href');
 		var thumbnail = $(element).parent().parent().find('img.card__image__src').first().attr('src');
 		console.log($(element).parent());
-
-		results.push({
+var articleInfo = {
 			title: title,
 			link: link,
-			thumbnail_pic: thumbnail
-		});
-		// var entry = new Article(results);
+			image: thumbnail
+		};
+		var entry = new Article(articleInfo);
 
-  //           entry.save(function(err, doc) {
-  //               if (err) {
-  //                   console.log(err);
-  //               } else {
-  //                   console.log(doc);
-  //               }
-  //           });
+            entry.save(function(err, doc) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log(doc);
+                }
+                results.push(articleInfo);
+            });
 	});
 		console.log('Here are your results:', results);
 		 res.send("Scrape Complete");
